@@ -8,7 +8,7 @@ function letterCount(string) {
   }, {})).flat().join('')
 }
 
-// console.info(letterCount('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD'))
+console.info(letterCount('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD'));
 
 // function rle(string) {
 //   let currentLetter = string[0];
@@ -60,4 +60,4 @@ function rle(string) {
   return array.join('');
 }
 
-console.info(console.info(rle('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD')))
+console.info(rle('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD'));
