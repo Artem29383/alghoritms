@@ -1,3 +1,5 @@
+// Написать функцию count увеличения счётчика на единицу
+
 function numberGenerator() {
  let number = 0;
 
@@ -7,7 +9,8 @@ function numberGenerator() {
  }
 }
 
-const getNumber = numberGenerator();
-console.log(getNumber()); //1
-console.log(getNumber()); //2
-console.log(getNumber()); //3
+const count = numberGenerator();
+
+console.log(count()); //1
+console.log(count()); //2
+console.log(count()); //3

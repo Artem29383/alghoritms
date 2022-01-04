@@ -33,31 +33,43 @@ console.info(letterCount('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD'));
 //   return array.join('');
 // }
 
-function rle(string) {
-  const array = [];
-  let count = 0;
-  let prev = string[0]
+// function rle(string) {
+//   const array = [];
+//   let count = 0;
+//   let prev = string[0]
+//
+//   string.split('').forEach((value, index) => {
+//     if (value === prev) {
+//       count +=1;
+//       if (index === string.length - 1) {
+//         array.push(prev);
+//         if (count > 1) {
+//           array.push(count);
+//         }
+//       }
+//     } else {
+//       array.push(prev);
+//       if (count > 1) {
+//         array.push(count);
+//       }
+//       prev = value;
+//       count = 1;
+//     }
+//   })
+//
+//   return array.join('');
+// }
 
-  string.split('').forEach((value, index) => {
-    if (value === prev) {
-      count +=1;
-      if (index === string.length - 1) {
-        array.push(prev);
-        if (count > 1) {
-          array.push(count);
-        }
-      }
-    } else {
-      array.push(prev);
-      if (count > 1) {
-        array.push(count);
-      }
-      prev = value;
-      count = 1;
+function rle(s) {
+  for(var i=0, a = 0, b = ''; i <= s.length; ++i) {
+    if(s.charAt(i) == s.charAt(i+1)) a++;
+  else {
+      b += s.charAt(i) + (a ? a + 1 : '');
+      a = 0;
     }
-  })
-
-  return array.join('');
+  }
+  return b;
 }
+
 
 console.info(rle('AVVVBBBVVXDHJFFFFDDDDDDHAAAAJJJDDSLSSSDDDD'));

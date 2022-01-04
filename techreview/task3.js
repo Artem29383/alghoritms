@@ -1,14 +1,10 @@
-const person = {
-  name: 'MyName'
-}
+// необходимо написать функцию, которая принимает в качестве аргумента строку и возвращает индекс первого уникального символа. Если мы не найдем ни одного уникального символа, то функция должна вернуть -1.
+const input1 = "leetcode"; //0
+const input2 = "loveleetcode"; // 2
+const input3 = "aabb"; // -1
 
-function info(phone, email) {
-  console.log(`Имя: ${this.name}, Тел.:${phone}, Email: ${email}`)
-}
+const firstUniqChar = (string) => {};
 
-function call(func, context, ...rest) {
-  context['func'] = func;
-  context.func(...rest);
-}
-
-call(info, person, '1234', 'c@mail.ru')
+// console.log(firstUniqChar(input1))
+// console.log(firstUniqChar(input2))
+// console.log(firstUniqChar(input3))

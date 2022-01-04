@@ -12,5 +12,6 @@ Array.prototype.flatten = function () {
   return flatten(this);
 };
 
+
 console.info(flatten(array));
 console.info(array.flatten());

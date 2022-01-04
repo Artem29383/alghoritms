@@ -2,7 +2,7 @@ function getBanners(banners, count) {
   if (banners.length < count) return [...banners];
   const result = new Set();
   const maxRandom = banners.reduce((sum, item) => item.weight + sum, 0);
-// const list = banners
+// const list.txt = banners
 // .reduce((array, elem) => [...array, elem.weight], [])
 // .sort((a, b) => a - b);
   while (result.size < count) {

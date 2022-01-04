@@ -1,6 +1,6 @@
 const input1 = 'leetcode' //0
-// const input2 = 'loveleetcode' // 2
-// const input3 = 'aabb' // -1
+const input2 = 'loveleetcode' // 2
+const input3 = 'aabb' // -1
 //
 // // const firstUniqChar = (string) => {
 // //   return string.split('').reduce((acc, char, index) => {
@@ -39,8 +39,8 @@ const firstUniqChar = string => {
 }
 
 console.log(firstUniqChar(input1))
-// console.log(firstUniqChar(input2))
-// console.log(firstUniqChar(input3))
+console.log(firstUniqChar(input2))
+console.log(firstUniqChar(input3))
 
 // function add(a, b) {
 //   if (b) {
