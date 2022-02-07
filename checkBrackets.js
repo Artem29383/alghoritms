@@ -18,27 +18,50 @@
 //   return brackets.open === 0;
 // }
 
+// function checkBrackets(string) {
+//   const brackets = []
+//   const mirrors = {
+//     '(':')',
+//     '[':']',
+//     '{':'}',
+//   }
+//
+//   for (let i = 0; i < string.length; i++) {
+//     const bracket = string[i]
+//     if (['(', '{', '['].includes(bracket)) {
+//       brackets.push(bracket)
+//     } else {
+//       const response = brackets.pop();
+//       if (bracket !== mirrors[response]) {
+//         return false;
+//       }
+//     }
+//   }
+//
+//   return brackets.length === 0;
+// }
+
 function checkBrackets(string) {
-  const brackets = []
+  const acc = []
   const mirrors = {
-    '(':')',
-    '[':']',
-    '{':'}',
+    '{': '}',
+    '[': ']',
+    '(': ')',
   }
 
-  for (let i = 0; i < string.length; i++) {
-    const bracket = string[i]
-    if (['(', '{', '['].includes(bracket)) {
-      brackets.push(bracket)
+  const array = string.split('');
+
+  for (let i = 0; i < array.length; i++) {
+    const brace = array[i];
+    if (mirrors[brace]) {
+      acc.push(brace);
     } else {
-      const response = brackets.pop();
-      if (bracket !== mirrors[response]) {
-        return false;
-      }
+      const removeItem = acc.pop();
+      if (brace !== mirrors[removeItem]) return false;
     }
   }
 
-  return brackets.length === 0;
+  return true;
 }
 
 console.log(checkBrackets('[{((({}(()))))}]'))
